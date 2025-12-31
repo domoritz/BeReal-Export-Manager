@@ -15,16 +15,11 @@ instead of the way everyone else always does it with UNIX Epoch time, but it mak
 
 1. Clone the repository:
     ```sh
-    git@github.com:SoPat712/BeReal-Export-Manager.git 
+    git@github.com:domoritz/BeReal-Export-Manager.git 
     cd BeReal-Export-Manager
     ```
 
-2. Install the required Python packages:
-    ```sh
-    pip install -r requirements.txt
-    ```
-
-3. Ensure you have `exiftool` installed on your system and set it up as a `PATH` variable. You can download it [here](https://exiftool.org/).
+2. Ensure you have `exiftool` installed on your system and set it up as a `PATH` variable. You can download it [here](https://exiftool.org/).
 
 4. Put your BeReal export folder in the `input` directory. The script will automatically find it.
 
@@ -32,7 +27,7 @@ instead of the way everyone else always does it with UNIX Epoch time, but it mak
 
 Put your BeReal export in the `input` folder and run:
 ```sh
-python bereal_exporter.py [OPTIONS]
+uv run --with pyexiftool --with Pillow --with pytz --with timezonefinder --with tqdm bereal_exporter.py [OPTIONS]
 ```
 
 The script automatically finds your export folder and processes everything in parallel for speed.
