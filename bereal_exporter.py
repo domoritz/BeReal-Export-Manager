@@ -904,8 +904,8 @@ class BeRealExporter:
             primary = Image.open(primary_path)
             secondary = Image.open(secondary_path)
             
-            # Calculate secondary image size (about 1/4 of primary width)
-            secondary_width = primary.width // 4
+            # Calculate secondary image size (about 1/3 of primary width)
+            secondary_width = primary.width // 3
             secondary_height = int(secondary.height * (secondary_width / secondary.width))
             
             # Resize secondary image
